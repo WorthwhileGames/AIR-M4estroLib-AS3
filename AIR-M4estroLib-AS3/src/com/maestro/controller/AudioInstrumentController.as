@@ -1,25 +1,21 @@
 ﻿package com.maestro.controller 
 {
 	//import com.disney.base.BaseMovieClip;
-	import com.disney.geom.Vector2;
-	import com.disney.util.Debug;
-	import com.m4estro.vc.BaseMovieClip;
 	import com.m4estro.ui.KeyboardInstrumentMC;
+	import com.m4estro.vc.BaseMovieClip;
 	import com.maestro.managers.InputManager;
-	import com.noteflight.standingwave3.elements.AudioDescriptor;
-	import com.noteflight.standingwave3.elements.Sample;
-	import com.noteflight.standingwave3.output.AudioPlayer;
-	import com.noteflight.standingwave3.performance.AudioPerformer;
-	import com.noteflight.standingwave3.performance.ListPerformance;
 	import com.maestro.music.AudioInstrument;
 	import com.maestro.music.AudioNote;
-	import flash.display.BitmapData;
+	import com.noteflight.standingwave3.elements.Sample;
+	import com.noteflight.standingwave3.output.AudioPlayer;
+	import com.noteflight.standingwave3.performance.ListPerformance;
+	
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
 	
-	import __AS3__.vec.Vector;
+	//import __AS3__.vec.Vector;
 	
 	/**
 	 * ...
@@ -47,7 +43,7 @@
 		{
 		}
 		
-		public function setKeyboardMC(kbd_mc:KeyboardInstrumentMC)
+		public function setKeyboardMC(kbd_mc:KeyboardInstrumentMC):void
 		{
 			trace("setKeyboardMC: " + kbd_mc);
 			__keyboardMC = kbd_mc;
