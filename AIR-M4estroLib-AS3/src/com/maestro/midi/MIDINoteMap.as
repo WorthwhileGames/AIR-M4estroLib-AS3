@@ -1,7 +1,6 @@
 ﻿package com.maestro.midi 
 {
-	import com.disney.util.Debug;
-	import com.noteflight.standingwave3.output.AudioSampleHandler;
+	
 	
 	/**
 	 * ...

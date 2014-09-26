@@ -1,9 +1,9 @@
 ﻿package com.maestro.editor 
 {
-	import com.disney.base.BaseMovieClip;
 	import com.m4estro.ui.editor.TrackListItemMC;
 	import com.m4estro.ui.editor.TrackListMC;
 	import com.m4estro.vc.BaseObject;
+	
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.MouseEvent;

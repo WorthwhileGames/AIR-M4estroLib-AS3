@@ -5,10 +5,7 @@
 	 * ...
 	 * @author ...
 	 */
-	import com.disney.util.Debug;
 	import com.maestro.music.musicxml.Score;
-	 
-	import flash.utils.getTimer;
 	 
 	 
 	public class Section 

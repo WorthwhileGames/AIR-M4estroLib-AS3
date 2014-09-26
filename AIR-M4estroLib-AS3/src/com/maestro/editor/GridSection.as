@@ -1,7 +1,6 @@
 ﻿package com.maestro.editor 
 {
-	import com.disney.util.Debug;
-	import com.maestro.music.musicxml.Score;
+	import com.m4estro.vc.Debug;
 	import com.maestro.music.song.Section;
 	
 	/**

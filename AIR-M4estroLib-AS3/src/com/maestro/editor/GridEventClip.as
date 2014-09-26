@@ -1,8 +1,10 @@
 ﻿package com.maestro.editor 
 {
-	import com.disney.base.BaseMovieClip;
+	import com.m4estro.vc.BaseMovieClip;
+	
 	import flash.display.MovieClip;
 	import flash.text.TextField;
+
 	/**
 	 * ...
 	 * @author ...

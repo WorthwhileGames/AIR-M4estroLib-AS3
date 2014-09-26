@@ -1,25 +1,17 @@
 ﻿package com.maestro.editor 
 {
-	//import com.disney.base.BaseMovieClip;
-	//import com.disney.cars.ui.buttons.PushButtonArrow;
-	//import com.disney.cars.ui.buttons.PushButtonMicroTintable;
-	//import com.disney.cars.ui.sliders.HorizontalSliderNormal;
-	//import com.disney.ui.buttons.PushButton;
-	//import com.disney.util.Debug;
-	import com.m4estro.vc.BaseMovieClip;
-	import com.m4estro.ui.buttons.PushButtonMicroTintable;
+	import com.disney.ui.sliders.SliderEvent;
 	import com.m4estro.ui.editor.MIDIEditorMC;
-	import com.m4estro.ui.buttons.PushButton;
 	import com.m4estro.ui.sliders.HorizontalSliderNormal;
-	import com.maestro.music.song.Soundtrack;
-	import com.maestro.music.MusicManager;
 	import com.m4estro.vc.BaseObject;
 	import com.m4estro.vc.Debug;
+	import com.maestro.music.MusicManager;
+	import com.maestro.music.song.Soundtrack;
+	
 	import flash.display.DisplayObject;
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import com.disney.ui.sliders.SliderEvent;
 	import flash.geom.ColorTransform;
 	import flash.geom.Rectangle;
 	import flash.text.TextField;
@@ -33,22 +25,22 @@
 		
 		public var trackColors:Array;
 		
-		/*
-		public var transport:TransportController;
-		public var titleBar:MovieClip;
-		public var menuButton:MovieClip;
-		public var bg:MovieClip;
-		public var btnPlay:PushButton;
-		public var btnRewind:PushButton;
-		public var slTempo:HorizontalSliderNormal;
-		public var slHorizScale:HorizontalSliderNormal;
-		public var slHorizScroll:HorizontalSliderNormal;
-		public var tempoText:TextField;
-		public var fileNameText:TextField;
 		
-		public var saveButton:PushButtonMicroTintable;
-		public var loadButton:PushButtonMicroTintable;
-		*/
+		//public var transport:TransportController;
+		//public var titleBar:MovieClip;
+		//public var menuButton:MovieClip;
+		//public var bg:MovieClip;
+		//public var btnPlay:PushButton;
+		//public var btnRewind:PushButton;
+		//public var slTempo:MovieClip;
+		//public var slHorizScale:MovieClip;
+		//public var slHorizScroll:MovieClip;
+		//public var tempoText:TextField;
+		//public var fileNameText:TextField;
+		
+		//public var saveButton:MovieClip;
+		//public var loadButton:MovieClip;
+		
 		
 		private var __midiEditorMC:MIDIEditorMC;
 		private var __minimized:Boolean;
@@ -90,9 +82,9 @@
 			__midiEditorMC.loadButton.addEventListener(MouseEvent.MOUSE_UP, onTintableButton);
 			
 			__midiEditorMC.btnPlay.addEventListener(MouseEvent.MOUSE_DOWN, onPushButton);
-			__midiEditorMC.slTempo.addEventListener(SliderEvent.ON_CHANGE, onSliderChange);
-			__midiEditorMC.slHorizScale.addEventListener(SliderEvent.ON_CHANGE, onSliderChange);
-			__midiEditorMC.slHorizScroll.addEventListener(SliderEvent.ON_CHANGE, onSliderChange);
+			//__midiEditorMC.slTempo.addEventListener(SliderEvent.ON_CHANGE, onSliderChange);
+			//__midiEditorMC.slHorizScale.addEventListener(SliderEvent.ON_CHANGE, onSliderChange);
+			//__midiEditorMC.slHorizScroll.addEventListener(SliderEvent.ON_CHANGE, onSliderChange);
 			
 			
 			
@@ -127,7 +119,7 @@
 			trackColors = new Array(trackColor1, trackColor2, trackColor3, trackColor4, trackColor5, trackColor6, trackColor7);
 			
 			__tempoScale = 1;
-			__midiEditorMC.tempoText.text = "" + __tempoScale;
+			//__midiEditorMC.tempoText.text = "" + __tempoScale;
 			__eventGrid.tempoScale = 1;
 			
 		}
@@ -181,7 +173,7 @@
 					break;
 			}
 		}
-		
+		/*
 		public function onSliderChange(event:Event):void
 		{
 			var slider:HorizontalSliderNormal = HorizontalSliderNormal(event.target);
@@ -206,6 +198,7 @@
 					break;
 			}
 		}
+		*/
 		
 		public function onBGMouse(event:Event):void 
 		{

@@ -1,6 +1,5 @@
 ﻿package com.maestro.music.musicxml 
 {
-	import com.disney.util.Debug;
 	import com.maestro.midi.MIDINoteMap;
 	
 	/**

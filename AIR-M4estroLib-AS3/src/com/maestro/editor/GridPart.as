@@ -1,6 +1,6 @@
 ﻿package com.maestro.editor 
 {
-	import com.disney.util.Debug;
+	import com.m4estro.vc.Debug;
 	import com.maestro.music.musicxml.Measure;
 	import com.maestro.music.musicxml.Part;
 	

@@ -1,20 +1,11 @@
 ﻿package com.maestro.editor 
 {
-	//import com.disney.base.BaseMovieClip;
-	//import com.disney.ui.buttons.PushButton;
-	//import com.disney.cars.ui.buttons.PushButtonMicroTintable;
-	//import com.disney.cars.ui.sliders.HorizontalSliderNormal;
-	//import com.disney.cars.ui.sliders.VerticalSliderNormal;
-	//import com.disney.ui.buttons.PushButtonEvent;
-	//import com.disney.ui.sliders.SliderEvent;
-	//import com.disney.util.Debug;
 	import com.m4estro.ui.editor.SectionListItemMC;
 	import com.m4estro.vc.BaseObject;
 	import com.maestro.music.song.Section;
-	import flash.display.MovieClip;
+	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.text.TextField;
 	
 	/**
 	 * ...

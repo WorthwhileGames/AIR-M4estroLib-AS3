@@ -1,6 +1,5 @@
 ﻿package com.maestro.editor 
 {
-	import com.disney.input.Keys;
 	import com.m4estro.ui.editor.KeystripMC;
 	import com.m4estro.ui.editor.KeystripUnitMC;
 	import com.m4estro.vc.BaseObject;

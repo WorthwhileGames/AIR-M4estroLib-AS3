@@ -1,18 +1,11 @@
 ﻿package com.maestro.editor 
 {
 	
-	//import com.disney.ui.buttons.PushButton;
-	//import com.disney.cars.ui.buttons.PushButtonMicroTintable;
-	//import com.disney.cars.ui.sliders.HorizontalSliderNormal;
-	//import com.disney.cars.ui.sliders.VerticalSliderNormal;
-	//import com.disney.ui.buttons.PushButtonEvent;
-	//import com.disney.ui.sliders.SliderEvent;
-	//import com.disney.util.Debug;
 	import com.m4estro.ui.editor.TrackListItemMC;
 	import com.m4estro.ui.sliders.HorizontalSliderNormal;
-	
 	import com.m4estro.vc.BaseObject;
 	import com.maestro.music.musicxml.Part;
+	
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.FocusEvent;
@@ -100,7 +93,8 @@
 		
 		public function onInstrumentName(event:Event):void 
 		{
-			__gridPart.part.instrumentName = trackInstrument.text;
+			log("GridPart: " + __gridPart + ", " + __gridPart.part, "TrackListItem");
+			if (trackInstrument) __gridPart.part.instrumentName = trackInstrument.text;
 		}
 		
 		public function get mc():TrackListItemMC

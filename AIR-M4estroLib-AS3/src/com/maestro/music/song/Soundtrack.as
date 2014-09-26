@@ -1,6 +1,6 @@
 ﻿package com.maestro.music.song 
 {
-	import com.disney.util.Debug;
+	import com.m4estro.vc.Debug;
 	
 	/**
 	 * ...

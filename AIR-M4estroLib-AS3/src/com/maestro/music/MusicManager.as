@@ -1,42 +1,31 @@
 ﻿package com.maestro.music 
 {
-	import com.disney.base.BaseEventDispatcher;
-	import com.disney.loaders.*;
-	//import com.disney.trumpet3d.objects.skeletal.SkeletalAnimation;
-	import com.disney.util.Debug;
-	//import com.noteflight.standingwave3.performance.QueuePerformance;
+	import com.m4estro.vc.Debug;
+	import com.maestro.controller.AudioInstrumentController;
 	import com.maestro.midi.MIDINoteMap;
 	import com.maestro.music.musicxml.Measure;
 	import com.maestro.music.musicxml.Part;
-	import flash.display.Loader;
-	import flash.net.FileFilter;
-	import flash.net.FileReference;
-	import flash.utils.getDefinitionByName;
-	import flash.utils.getTimer;
-	
-	import flash.events.Event;
-	
+	import com.maestro.music.song.Section;
+	import com.maestro.music.song.Soundtrack;
 	import com.noteflight.standingwave3.elements.AudioDescriptor;
-	import com.noteflight.standingwave3.elements.IAudioSource;
 	import com.noteflight.standingwave3.output.AudioPlayer;
 	import com.noteflight.standingwave3.performance.AudioPerformer;
 	import com.noteflight.standingwave3.performance.ListPerformance;
-	import com.noteflight.standingwave3.sources.SoundSource;
 	
-	import com.maestro.controller.AudioInstrumentController;
-	import com.maestro.music.AudioInstrument;
-	import com.maestro.music.DefaultAudioInstrument;
-	import com.maestro.music.InstrumentGroup;
-	import com.maestro.music.MusicEvent;
-	import com.maestro.music.MusicEventList;
-	import com.maestro.music.song.Soundtrack;
-	import com.maestro.music.song.Section;
+	import flash.events.Event;
+	import flash.events.EventDispatcher;
+	import flash.net.FileFilter;
+	import flash.net.FileReference;
+	import flash.net.URLLoader;
+	import flash.net.URLRequest;
+	import flash.utils.getDefinitionByName;
+	import flash.utils.getTimer;
 	
 	/**
 	 * ...
 	 * @author ...
 	 */
-	public class MusicManager extends BaseEventDispatcher
+	public class MusicManager extends EventDispatcher
 	{
 		
 		public static const INSTRUMENT_CONFIG_LOADED:String = "INSTRUMENT_CONFIG_LOADED";
@@ -106,13 +95,19 @@
 		public function loadInstruments(instrumentConfigURL:String):void
 		{
 			trace("MusicManager:loadInstruments: " + instrumentConfigURL);
-			XMLLoader.instance.load(instrumentConfigURL, onInstrumentConfigLoaded);
+			var url_request:URLRequest = new URLRequest(instrumentConfigURL);
+			var loader:URLLoader = new URLLoader(url_request);
+			loader.addEventListener(Event.COMPLETE, onInstrumentConfigLoaded);
+			//XMLLoader.instance.load(instrumentConfigURL, onInstrumentConfigLoaded);
 		}
 		
 		public function loadSoundtrack(soundtrackURL:String):void
 		{
 			trace("MusicManager:loadSoundtrack: " + soundtrackURL);
-			XMLLoader.instance.load(soundtrackURL, onSoundtrackLoaded);
+			var url_request:URLRequest = new URLRequest(soundtrackURL);
+			var loader:URLLoader = new URLLoader(url_request);
+			loader.addEventListener(Event.COMPLETE, onSoundtrackLoaded);
+			//XMLLoader.instance.load(soundtrackURL, onSoundtrackLoaded);
 		}
 		
 		public function get playing():Boolean
@@ -120,8 +115,9 @@
 			return __playing
 		}
 		
-		private function onInstrumentConfigLoaded(xml:XML):void
+		private function onInstrumentConfigLoaded(event:Event):void
         {
+			var xml:XML = new XML(event.target.data);
 			trace("MusicManager:onInstrumentConfigLoaded: ");
 
 			//trace("xml.@id: " + xml.@id);
@@ -140,7 +136,7 @@
 				var file_offset:Number = item.@file_offset;
 				var soundFileName:String = item.@soundFileName;
 				var instrumentClass:Class = getDefinitionByName(item.@instrumentClass) as Class;
-				var url:String = __assetPath + "instruments/" + soundFileName;
+				var url:String = __assetPath + "/instruments/" + soundFileName;
 				var notes:XMLList = item.children();
 
 				//trace(item.@id + ", " + item.@soundFileName + ", " + item.@instrumentClass + ", " + url); 
@@ -158,8 +154,9 @@
 			controller.init(__instrumentGroup.getInstrumentWithID(instrumentID));
 		}
 		
-		private function onSoundtrackLoaded(xml:XML):void
+		private function onSoundtrackLoaded(event:Event):void
         {
+			var xml:XML = new XML(event.target.data);
 			var soundtrack:Soundtrack = new Soundtrack(xml);
 			
 			__currentSoundtrack = soundtrack;
@@ -191,7 +188,7 @@
 			//var loader:Loader = new Loader();
 			//loader.loadBytes(evt.target.data);
 			Debug.log("onFileLoaded: ", "MusicManager");
-			onSoundtrackLoaded(XML(evt.target.data));
+			onSoundtrackLoaded(evt);
 			__fileRef.removeEventListener(Event.COMPLETE, onFileLoaded);
 		}
 

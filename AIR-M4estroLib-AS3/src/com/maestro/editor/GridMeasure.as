@@ -1,9 +1,8 @@
 ﻿package com.maestro.editor 
 {
-	import com.disney.util.Debug;
 	import com.maestro.music.musicxml.Measure;
 	import com.maestro.music.musicxml.Note;
-	import com.maestro.music.musicxml.Part;
+	
 	import flash.display.MovieClip;
 	/**
 	 * ...

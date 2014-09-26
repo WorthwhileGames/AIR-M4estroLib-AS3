@@ -1,7 +1,6 @@
 ﻿package com.maestro.world 
 {
-	import com.disney.base.BaseMovieClip;
-	import com.disney.util.Debug;
+	import com.m4estro.vc.BaseMovieClip;
 	import com.maestro.music.musicxml.Measure;
 	import com.maestro.music.musicxml.Note;
 	

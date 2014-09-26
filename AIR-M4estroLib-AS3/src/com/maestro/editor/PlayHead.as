@@ -1,10 +1,12 @@
 ﻿package com.maestro.editor 
 {
-	import com.disney.base.BaseMovieClip;
+	import com.m4estro.vc.BaseMovieClip;
+	
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
+
 	/**
 	 * ...
 	 * @author ...

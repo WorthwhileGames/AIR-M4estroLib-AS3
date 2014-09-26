@@ -1,13 +1,13 @@
 ﻿package com.maestro.controller 
 {
-	import com.disney.base.BaseMovieClip;
-	import com.maestro.world.Block;
-	import com.maestro.world.GameBoard;
-	import com.disney.util.Debug;
+	import com.m4estro.vc.BaseMovieClip;
+	import com.maestro.music.MusicManager;
 	import com.maestro.music.Performer;
 	import com.maestro.music.PerformerList;
+	import com.maestro.world.Block;
+	import com.maestro.world.GameBoard;
+	
 	import flash.display.MovieClip;
-	import com.maestro.music.MusicManager;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	
@@ -69,7 +69,7 @@
 		public function onMouse(event:Event):void 
 		{
 			var clip:MovieClip = MovieClip(event.target);
-			Debug.log("onMouse: " + clip.parent.name);
+			log("onMouse: " + clip.parent.name, "Measure Controller");
 			
 			if (event.type == MouseEvent.MOUSE_DOWN)
 			{

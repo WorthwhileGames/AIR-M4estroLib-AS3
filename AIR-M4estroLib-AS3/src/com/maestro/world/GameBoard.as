@@ -1,17 +1,14 @@
 ﻿package com.maestro.world 
 {
-	import com.disney.base.BaseMovieClip;
-	//import com.disney.games.notetris.NoteTris;
-	//import com.disney.trumpet3d.pipeline.primitiverenderers.VectorLineRenderer;
+	import com.m4estro.vc.BaseMovieClip;
+	import com.m4estro.vc.Debug;
+	import com.maestro.managers.InputManager;
 	import com.maestro.music.MusicManager;
 	import com.maestro.music.musicxml.Measure;
 	import com.maestro.music.musicxml.Part;
-	import com.maestro.music.song.Section;
 	import com.maestro.music.song.Soundtrack;
-	import flash.geom.Rectangle;
 	
-	import com.maestro.managers.InputManager;
-	import com.maestro.controller.GameTimer;
+	import flash.geom.Rectangle;
 	
 	/**
 	 * ...
@@ -60,7 +57,7 @@
 			
 			rows = new Array();
 			var soundtrack:Soundtrack = MusicManager.instance.currentSoundtrack;
-			log("restart: " + soundtrack.sections, "NoteTris");
+			Debug.log("restart: " + soundtrack.sections, "NoteTris");
 			var part:Part = soundtrack.getSectionWithIndex(0).parts[0];
 			var measure:Measure;
 			
@@ -68,7 +65,7 @@
 			
 			for each (measure in part.measures)
 			{
-				log("measure: " + measure, "NoteTris");
+				Debug.log("measure: " + measure, "NoteTris");
 				var newRow:Row = new Row();
 				newRow.initWithMeasure(measure);
 				rows.push(newRow);
@@ -172,7 +169,7 @@
 				{
 					MusicManager.instance.playNextPerformer();
 					
-					log("All Targets Matched: " + blocksSettled, "NoteTris");
+					Debug.log("All Targets Matched: " + blocksSettled, "NoteTris");
 					//removeSettledBlocks();
 					removeTargetRow(currentTargetRow);
 					//paused = true;
@@ -229,8 +226,8 @@
 		
 		private function createBlocksFromRow(row:Row):void
 		{
-			log("createBlocksFromRow: row: " + row, "NoteTris");
-			log("createBlocksFromRow: row.units(): " + row.units(), "NoteTris");
+			Debug.log("createBlocksFromRow: row: " + row, "NoteTris");
+			Debug.log("createBlocksFromRow: row.units(): " + row.units(), "NoteTris");
 			
 			var units:Array = row.units();
 			var unitsCount:int = units.length;
@@ -243,9 +240,9 @@
 				
 				newBlock.init(unit);
 				var durationRange:int = (GAMEBOARD_WIDTH / Block.PIXELS_PER_DURATION_UNIT) - newBlock.duration;
-				log("createBlocksFromRow: durationRange: " + durationRange, "NoteTris");
+				Debug.log("createBlocksFromRow: durationRange: " + durationRange, "NoteTris");
 				var randDuration:int = Math.floor( Math.random() * durationRange);
-				log("createBlocksFromRow: randDuration: " + randDuration, "NoteTris");
+				Debug.log("createBlocksFromRow: randDuration: " + randDuration, "NoteTris");
 				newBlock.x = randDuration * Block.PIXELS_PER_DURATION_UNIT;
 				nextX = nextX + newBlock.width;
 				newBlock.y = 0 - (2 * i * Block.PIXELS_PER_VERTICAL_UNIT);
@@ -299,8 +296,8 @@
 				
 				blocks = newBlocks;
 				
-				log("blocks: " + blocks, "NoteTris");
-				log("blocksSettled: " + blocksSettled, "NoteTris");
+				Debug.log("blocks: " + blocks, "NoteTris");
+				Debug.log("blocksSettled: " + blocksSettled, "NoteTris");
 				
 				activeBlockIndex = 0;
 				activeBlock = blocks[activeBlockIndex] as Block;
@@ -321,7 +318,7 @@
 			{
 				var thisBlock:Block = blocksSettled[i] as Block;
 				
-				log("Removing: " + thisBlock, "NoteTris");
+				Debug.log("Removing: " + thisBlock, "NoteTris");
 				removeChild(thisBlock);
 				thisBlock.cleanup();
 				thisBlock = null;

@@ -1,8 +1,9 @@
 ﻿package com.maestro.music.musicxml 
 {
-	import com.disney.util.Debug;
+	import com.m4estro.vc.Debug;
 	import com.maestro.music.MusicEvent;
 	import com.maestro.music.MusicEventList;
+
 	/**
 	 * ...
 	 * @author ...

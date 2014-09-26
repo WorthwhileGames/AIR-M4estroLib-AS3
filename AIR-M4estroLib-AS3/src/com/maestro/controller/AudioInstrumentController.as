@@ -1,6 +1,5 @@
 ﻿package com.maestro.controller 
 {
-	//import com.disney.base.BaseMovieClip;
 	import com.m4estro.ui.KeyboardInstrumentMC;
 	import com.m4estro.vc.BaseMovieClip;
 	import com.maestro.managers.InputManager;
@@ -14,9 +13,7 @@
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.geom.Rectangle;
-	
-	//import __AS3__.vec.Vector;
-	
+		
 	/**
 	 * ...
 	 * @author ...

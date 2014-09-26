@@ -1,34 +1,22 @@
 ﻿package com.maestro.editor 
 {
-	//import com.disney.base.BaseMovieClip;
-	//import com.disney.cars.ui.buttons.ColorChooserPushButton;
-	//import com.disney.cars.ui.list.GridListItem;
-	//import com.disney.util.Debug;
 	import com.m4estro.ui.editor.EventGridMC;
 	import com.m4estro.ui.editor.EventGridUnitMC;
 	import com.m4estro.ui.editor.GridEventMC;
 	import com.m4estro.vc.BaseObject;
 	import com.m4estro.vc.Debug;
-	import com.noteflight.standingwave3.output.AudioPlayer;
-	import com.noteflight.standingwave3.performance.AudioPerformer;
-	import com.noteflight.standingwave3.performance.ListPerformance;
-	import com.noteflight.standingwave3.elements.AudioDescriptor;
+	import com.maestro.music.MusicManager;
 	import com.maestro.music.musicxml.Note;
 	import com.maestro.music.song.Section;
 	import com.maestro.music.song.Soundtrack;
-	import com.maestro.music.MusicManager;
+	import com.noteflight.standingwave3.performance.AudioPerformer;
+	
 	import flash.display.MovieClip;
 	import flash.events.Event;
-	import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
-	import flash.geom.ColorTransform;
 	import flash.geom.Rectangle;
-	import flash.geom.Transform;
-	import flash.media.Sound;
 	import flash.media.SoundChannel;
 	import flash.utils.getTimer;
-	
-	import com.maestro.managers.InputManager;
 	
 	/**
 	 * ...

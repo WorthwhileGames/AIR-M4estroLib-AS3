@@ -6,9 +6,7 @@
 	 * @author ...
 	 */
 	
-	import com.disney.util.Debug;
 	import com.noteflight.standingwave3.elements.Sample;
-	import com.noteflight.standingwave3.performance.IPerformance;
 	import com.noteflight.standingwave3.performance.ListPerformance;
 	import com.noteflight.standingwave3.performance.PerformableAudioSource;
 	 

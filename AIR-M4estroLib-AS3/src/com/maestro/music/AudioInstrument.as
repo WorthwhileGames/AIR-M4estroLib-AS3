@@ -1,18 +1,9 @@
 ﻿package com.maestro.music 
 {
 
-	import com.disney.util.Debug;
-	import com.noteflight.standingwave3.elements.AudioDescriptor;
-	import com.noteflight.standingwave3.elements.IAudioFilter;
-	import com.noteflight.standingwave3.elements.IAudioSource;
-	import com.noteflight.standingwave3.elements.Sample;
-	import com.noteflight.standingwave3.output.AudioPlayer;
-	import com.noteflight.standingwave3.performance.AudioPerformer;
-	import com.noteflight.standingwave3.performance.ListPerformance;
-	import com.noteflight.standingwave3.performance.PerformableAudioSource;
-	//import com.noteflight.standingwave3.performance.QueuePerformance;
-	import com.noteflight.standingwave3.sources.SineSource;
+	import com.m4estro.vc.Debug;
 	import com.noteflight.standingwave3.sources.SoundSource;
+	
 	import flash.events.Event;
 	import flash.media.Sound;
 	import flash.net.URLRequest;

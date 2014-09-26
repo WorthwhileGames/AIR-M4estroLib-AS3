@@ -1,6 +1,6 @@
 ﻿package com.maestro.world 
 {
-	import com.disney.base.BaseMovieClip;
+	
 	
 	/**
 	 * ...

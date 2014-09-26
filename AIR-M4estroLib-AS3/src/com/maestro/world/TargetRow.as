@@ -1,6 +1,9 @@
 ﻿package com.maestro.world 
 {
-	import com.disney.base.BaseMovieClip;
+	import com.m4estro.vc.BaseMovieClip;
+	import com.m4estro.vc.Debug;
+	
+	import cmodule.awave.log;
 	
 	/**
 	 * ...
@@ -23,8 +26,8 @@
 		
 		public function init(_row:Row, game_board:GameBoard, index:int): void
 		{
-			log("TargetRow.init: row: " + _row + ", game_board: " + game_board, "NoteTris");
-			log("TargetRow.init: row.units(): " + _row.units(), "NoteTris");
+			Debug.log("TargetRow.init: row: " + _row + ", game_board: " + game_board, "NoteTris");
+			Debug.log("TargetRow.init: row.units(): " + _row.units(), "NoteTris");
 			
 			row = _row;
 			gameBoard = game_board;
@@ -91,7 +94,7 @@
 			{
 				var targetCount:int = targets.length;
 				
-				log("targets: " +targets, "NoteTris");
+				Debug.log("targets: " +targets, "NoteTris");
 				
 				for (var j:int = 0; j < targetCount; j++)
 				{

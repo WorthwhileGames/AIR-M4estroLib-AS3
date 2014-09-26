@@ -1,18 +1,16 @@
 ﻿package com.maestro.editor 
 {
-	import adobe.utils.CustomActions;
-	import com.disney.util.Debug;
 	import com.m4estro.ui.editor.GridEventMC;
-	import com.noteflight.standingwave3.elements.Sample;
-	import com.noteflight.standingwave3.output.AudioPlayer;
-	import com.maestro.controller.AudioInstrumentController;
+	import com.m4estro.vc.Debug;
 	import com.maestro.music.AudioInstrument;
 	import com.maestro.music.AudioNote;
 	import com.maestro.music.MusicManager;
 	import com.maestro.music.musicxml.Note;
+	import com.noteflight.standingwave3.elements.Sample;
+	import com.noteflight.standingwave3.output.AudioPlayer;
+	
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.display.MovieClip;
 	import flash.geom.Rectangle;
 	
 	/**

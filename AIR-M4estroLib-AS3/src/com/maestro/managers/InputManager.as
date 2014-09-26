@@ -4,15 +4,9 @@
 
 package com.maestro.managers  {
 	
-	//import com.disney.games.GameContainer;
-	import com.maestro.managers.InputObject;
-	import com.disney.util.Debug;
-	import flash.display.MovieClip;
 	import flash.display.Stage;
 	import flash.events.KeyboardEvent;
 	import flash.ui.Keyboard;
-	
-	import com.maestro.controller.GameTimer;
 	
 	public class InputManager {
 		
