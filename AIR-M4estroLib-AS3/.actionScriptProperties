@@ -34,8 +34,7 @@
         </excludedEntries>
       </libraryPathEntry>
       <libraryPathEntry kind="3" linkType="2" path="/Users/raptoron/Documents/git/AIR-M4estroUILib-FLA/AIR_M4estroUILib_FLA/fla/AIR-M4estroUILib-FLA.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="2" path="/Users/raptoron/Documents/iOS_Development/AIR-Standingwave3-AS3/bin/AIR-Standingwave3-AS3.swc" useDefaultLinkType="false"/>
-      <libraryPathEntry kind="3" linkType="2" path="swcs/DVC_OS.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="2" path="/Users/raptoron/Documents/git/AIR-Standingwave3-AS3/AIR-Standingwave3-AS3/bin/AIR-Standingwave3-AS3.swc" useDefaultLinkType="false"/>
       <libraryPathEntry kind="3" linkType="2" path="swcs/DVC_UI.swc" useDefaultLinkType="false"/>
     </libraryPath>
     <sourceAttachmentPath/>
